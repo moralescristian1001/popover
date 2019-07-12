@@ -10,11 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopoverComponent } from './popover/popover.component';
+import { ContentComponent } from './content/content.component';
+import {DialogService} from './popover/shared/overlay.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PopoverComponent
+    PopoverComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { PopoverComponent } from './popover/popover.component';
     PortalModule,
     OverlayModule
   ],
-  providers: [],
+  entryComponents: [PopoverComponent, ContentComponent],
+  providers: [DialogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

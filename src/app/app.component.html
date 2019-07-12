@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="example-button-row padding">
   <h3>Popover</h3>
-  <button mat-raised-button color="primary">Primary</button>
+  <button #origin mat-raised-button color="primary" (click)="createOverlay(origin)">Primary</button>
 </div>
 <router-outlet></router-outlet>
